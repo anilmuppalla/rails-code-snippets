@@ -13,7 +13,7 @@ This contains a list of all useful code snippets that i have used and aggregated
 ```
 2. If you need to add a bootstrap icon in your button
 
-* As part of your form
+    * As part of your form
 
 
 ```
@@ -22,7 +22,7 @@ This contains a list of all useful code snippets that i have used and aggregated
   <% end %>
 ```
 
-* Normal way ( here you can see i don use the bootstrap provided icons, use fontello for its large collections)
+    * Normal way ( here you can see i don use the bootstrap provided icons, use fontello for its large collections)
 
 
 ```
@@ -32,7 +32,7 @@ This contains a list of all useful code snippets that i have used and aggregated
           method: :delete %>
 ```
 
-3 Using Gravatar to embedd user profile images
+3. Using Gravatar to embedd user profile images
 
 ```
 def gravatar_for(user, options = { size: 50 })
