@@ -5,14 +5,15 @@ This contains a list of all useful code snippets that i have used and aggregated
 
 ##Ruby Rails Code
 <ol>
-<li>Use the link_to_active_state gem to make active any link when selected, usually seen in nav bars. Use the following to add to your nav bars </li>
+
+<li>#####Use the link_to_active_state gem to make active any link when selected, usually seen in nav bars. Use the following to add to your nav bars </li>
 
 ```
 <%= link_to "Sign in", new_user_session_path, active_on: new_user_session_path %>
 ```
-<li>If you need to add a bootstrap icon in your button</li>
+<li>#####If you need to add a bootstrap icon in your button</li>
 
-* As part of your form
+As part of your form
 
 
 ```
@@ -46,5 +47,5 @@ after you write this in one of the helper files you can call for the gravatar im
 ```
 <%= gravatar_for current_user, size: 60 %>
 ```
-
+</ol>
 
