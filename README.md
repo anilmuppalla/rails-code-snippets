@@ -11,5 +11,22 @@ This contains a list of all useful code snippets that i have used and aggregated
 ```
 <%= link_to "Sign in", new_user_session_path, active_on: new_user_session_path %>
 ```
+<li> If you need to add a bootstrap icon in your button</li>
 
-* If you need to 
+* As part of your form
+
+```
+<%= button_tag(type: 'submit', class: "btn btn-success") do %>
+    <i class="icon-ok icon-white"></i> Signup
+  <% end %>
+```
+
+* Normal way ( here you can see i don use the bootstrap provided icons, use fontello for its large collections)
+
+```
+<%= link_to "<i class=\"fontello-icon-off \"></i>".html_safe,
+          destroy_user_session_path,
+          class: "btn btn-danger", :'data-toggle' => "popover", :title => "Sign Out",
+          method: :delete %>
+```
+</ol>
