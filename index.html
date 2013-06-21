@@ -3,61 +3,64 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Rails-code-snippets by mak89k</title>
+    <title>Rails Code Snippets by mak89k</title>
   </head>
 
   <body>
+
     <header>
-      <div class="inner">
-        <h1>Rails-code-snippets</h1>
-        <h2>This contains a list of all useful code snippets that i have used and aggregated over my time developing Rails based applications.</h2>
-        <a href="https://github.com/mak89k/rails-code-snippets" class="button"><small>View project on</small>GitHub</a>
+      <div class="container">
+        <h1>Rails Code Snippets</h1>
+        <h2>for the lazy</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/mak89k/rails-code-snippets/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/mak89k/rails-code-snippets/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/mak89k/rails-code-snippets" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
       </div>
     </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p>This contains a list of all useful code snippets that i have used and aggregated over my time developing Rails based applications.</p>
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="rails-code-snippets" class="anchor" href="#rails-code-snippets"><span class="octicon octicon-link"></span></a>Rails Code Snippets</h1>
+
+<p>This contains a list of all useful code snippets that i have used and aggregated over my time developing Rails based applications.</p>
 
 <h2>
 <a name="ruby-rails-code" class="anchor" href="#ruby-rails-code"><span class="octicon octicon-link"></span></a>Ruby Rails Code</h2>
 
-<ol>
-<li> Use the link_to_active_state gem to make active any link when selected, usually seen in nav bars. Use the following to add to your nav bars </li>
-</ol><pre><code>&lt;%= link_to "Sign in", new_user_session_path, active_on: new_user_session_path %&gt;
+<p>Use the link_to_active_state gem to make active any link when selected, usually seen in nav bars. Use the following to add to your nav bars</p>
+
+<pre><code>&lt;%= link_to "Sign in", new_user_session_path, active_on: new_user_session_path %&gt;
 </code></pre>
 
-<ol>
-<li> If you need to add a bootstrap icon in your button</li>
-</ol><ul>
-<li>As part of your form</li>
-</ul><pre><code>&lt;%= button_tag(type: 'submit', class: "btn btn-success") do %&gt;
+<p>If you need to add a bootstrap icon in your button</p>
+
+<p>As part of your form</p>
+
+<pre><code>&lt;%= button_tag(type: 'submit', class: "btn btn-success") do %&gt;
     &lt;i class="icon-ok icon-white"&gt;&lt;/i&gt; Signup
   &lt;% end %&gt;
 </code></pre>
 
-<ul>
-<li>Normal way ( here you can see i don use the bootstrap provided icons, use fontello for its large collections)</li>
-</ul><pre><code>&lt;%= link_to "&lt;i class=\"fontello-icon-off \"&gt;&lt;/i&gt;".html_safe,
+<p>Normal way ( here you can see i don use the bootstrap provided icons, use fontello for its large collections)</p>
+
+<pre><code>&lt;%= link_to "&lt;i class=\"fontello-icon-off \"&gt;&lt;/i&gt;".html_safe,
           destroy_user_session_path,
           class: "btn btn-danger", :'data-toggle' =&gt; "popover", :title =&gt; "Sign Out",
           method: :delete %&gt;
 </code></pre>
 
-<ol>
-<li> Using Gravatar to embedd user profile images</li>
-</ol><pre><code>def gravatar_for(user, options = { size: 50 })
+<p>Using Gravatar to embedd user profile images</p>
+
+<pre><code>def gravatar_for(user, options = { size: 50 })
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
@@ -69,25 +72,9 @@
 
 <pre><code>&lt;%= gravatar_for current_user, size: 60 %&gt;
 </code></pre>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/mak89k/rails-code-snippets/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/mak89k/rails-code-snippets/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/mak89k/rails-code-snippets"></a> is maintained by <a href="https://github.com/mak89k">mak89k</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    
   </body>
 </html>
