@@ -32,7 +32,7 @@ This contains a list of all useful code snippets that i have used and aggregated
           method: :delete %>
 ```
 
-* Using Gravatar to embedd user profile images
+3 Using Gravatar to embedd user profile images
 
 ```
 def gravatar_for(user, options = { size: 50 })
