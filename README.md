@@ -17,7 +17,7 @@ This contains a list of all useful code snippets that i have used and aggregated
 * As part of your form
 
 
-```
+```ruby
 
 <%= button_tag(type: 'submit', class: "btn btn-success") do %>
     <i class="icon-ok icon-white"></i> Signup
