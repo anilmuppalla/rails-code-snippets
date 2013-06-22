@@ -44,7 +44,7 @@ def gravatar_for(user, options = { size: 50 })
 ```
 after you write this in one of the helper files you can call for the gravatar image by:
 
-```
+```erb
 <%= gravatar_for current_user, size: 60 %>
 ```
 
