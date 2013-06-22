@@ -8,7 +8,7 @@ This contains a list of all useful code snippets that i have used and aggregated
 
 Use the link_to_active_state gem to make active any link when selected,  usually seen in nav bars. Use the following to add to your nav bars
 
-```html
+```
 <%= link_to "Sign in", new_user_session_path, active_on: new_user_session_path %>
 ```
 If you need to add a bootstrap icon in your button
@@ -34,7 +34,7 @@ Normal way ( here you can see i don use the bootstrap provided icons, use fontel
 
 Using Gravatar to embedd user profile images
 
-```
+```ruby
 def gravatar_for(user, options = { size: 50 })
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
