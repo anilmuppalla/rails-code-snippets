@@ -51,8 +51,8 @@ after you write this in one of the helper files you can call for the gravatar im
 Make an Image a clickable button
 
 ```erb
-<%= link_to image_tag("mark_attendance.gif", :size=>'160x120', :alt=>'attendence', :class=>"img-rounded"), 
-'#', {:class=>"thumbnail"}%>
+<%= link_to image_tag("mark_attendance.gif", :size=>'160x120', :alt=>'attendence', 
+:class=>"img-rounded"), '#', {:class=>"thumbnail"}%>
 <%= label_tag 'Mark Attendance'%>
 ```
 
