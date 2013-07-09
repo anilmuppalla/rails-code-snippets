@@ -39,7 +39,7 @@ def gravatar_for(user, options = { size: 50 })
     gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
     size = options[:size]
     gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}?s=#{size}"
-    image_tag(gravatar_url, alt: user.name, class: "gravatar img-polaroid")
+    image_tag(gravatar_url, alt: user.name, class: "gravatar img-polaroid")
   end
 ```
 after you write this in one of the helper files you can call for the gravatar image by:
@@ -56,3 +56,52 @@ Make an Image a clickable button
 <%= label_tag 'Mark Attendance'%>
 ```
 
+**Rails Date and Time picker**
+
+*Requirements*
+
+*jquery 
+*[jquery-ui-rails](https://github.com/joliss/jquery-ui-rails)
+*[Datepicker](https://github.com/albertopq/jquery_datepicker)
+*[Timepicker](https://github.com/trentrichardson/jQuery-Timepicker-Addon)
+
+
+*Datepicker*
+
+The date field should be set to a "text_field".
+```erb
+<%= f.text_field :date %>
+```
+Javascript for application.js file
+
+```js
+$(function() {
+  $('#selector').datepicker();
+});
+```
+*Timepicker*
+
+The time field should be set to a "text_field".
+```erb
+<%= f.text_field :time %>
+```
+Javascript for application.js file
+```js
+$(function(){
+ $('#selector').timepicker();
+});
+```
+
+CSS for Timepicker to be added in application.css file
+```css
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+```
