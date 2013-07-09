@@ -60,10 +60,10 @@ Make an Image a clickable button
 
 *Requirements*
 
-*jquery 
-*[jquery-ui-rails](https://github.com/joliss/jquery-ui-rails)
-*[Datepicker](https://github.com/albertopq/jquery_datepicker)
-*[Timepicker](https://github.com/trentrichardson/jQuery-Timepicker-Addon)
+* jquery-rails gem
+* [jquery-ui-rails](https://github.com/joliss/jquery-ui-rails)
+* [Datepicker](https://github.com/albertopq/jquery_datepicker)
+* [Timepicker](https://github.com/trentrichardson/jQuery-Timepicker-Addon)
 
 
 *Datepicker*
