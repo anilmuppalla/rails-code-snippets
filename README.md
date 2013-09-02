@@ -116,4 +116,11 @@ CSS for Timepicker to be added in application.css file
     <% end %>
 <%end%>
 ```
+If you use Devise to manage the Authentication, Here is the *Remember Me* code
+```erb
+<% if devise_mapping.rememberable? -%>
+      <%= f.check_box :remember_me %> 
+      <%= f.label :remember_me, class: "checkbox inline" %>
+  <% end -%>
+```
 
