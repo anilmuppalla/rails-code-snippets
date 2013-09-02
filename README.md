@@ -105,3 +105,14 @@ CSS for Timepicker to be added in application.css file
 .ui-timepicker-rtl dl { text-align: right; }
 .ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
 ```
+
+**Flash Messages**
+```erb
+<% flash.each do |key, value| %>
+    <%= content_tag(:div, class: "alert alert-#{key}") do%>
+        <%= content_tag(:button, 'x',type: "button",class: "close",:'data-dismiss'=>"alert") %>
+        <strong><%=value%></strong>
+    <% end %>
+<%end%>
+```
+
