@@ -124,3 +124,8 @@ If you use Devise to manage the Authentication, Here is the *Remember Me* code
   <% end -%>
 ```
 
+If you want any field to be uneditable, lets say when you want to update a useraccount,
+you might want the email of the user be uneditable.
+```erb
+<%= f.email_field :email, readonly: "readonly", name: "uneditablefield" %>
+```
