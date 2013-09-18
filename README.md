@@ -129,3 +129,13 @@ you might want the email of the user be uneditable.
 ```erb
 <%= f.email_field :email, readonly: "readonly", name: "uneditablefield" %>
 ```
+
+If you want Flash Messages corresponding to the actions 
+```erb
+<% flash.each do |key, value| %>
+        <%= content_tag(:div, class: "alert alert-#{key}") do%>
+        <%= content_tag(:button, 'x',type: "button",class: "close",:'data-dismiss'=>"alert") %>
+            <strong><%=value%></strong>
+          <% end %>
+      <%end%>
+```
