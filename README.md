@@ -140,3 +140,20 @@ If you want Flash Messages corresponding to the actions
           <% end %>
       <%end%>
 ```
+
+If you want to change the look of the scroll bar.
+```css
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #bf3e11;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+```
