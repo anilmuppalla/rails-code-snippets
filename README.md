@@ -157,3 +157,5 @@ If you want to change the look of the scroll bar.
   background-color: #aaa;
 }
 ```
+
+#### Use Free Bootstrap themes from [Bootswatch](http://bootswatch.com/)
